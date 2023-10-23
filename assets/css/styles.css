@@ -74,6 +74,7 @@ a {
   display: inline-flex;
   font-size: 1rem;
   position: relative;
+  font-family: "Sora", sans-serif;
 }
 .logo__circle::before,
 .logo__circle::after {
@@ -476,12 +477,15 @@ a {
 
 .member__control {
   margin-top: 38px;
-  display: flex;
-  column-gap: 18px;
   justify-content: center;
 }
 
-.member__control-btn {
+.control {
+  column-gap: 18px;
+  display: flex;
+}
+
+.control-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -495,13 +499,13 @@ a {
   transition: 0.25s;
 }
 
-.member__control-btn:hover {
+.control-btn:hover {
   border-color: var(--primary-color);
   background: var(--primary-color);
   cursor: pointer;
 }
 
-.member__control-next-icon {
+.control-next-icon {
   rotate: 180deg;
 }
 
@@ -545,4 +549,248 @@ a {
   display: flex;
   gap: 28px;
   margin-top: 38px;
+}
+
+/* News */
+
+.news {
+  margin-top: 85px;
+  padding: 85px 0;
+}
+
+.news__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.news_content {
+  flex-shrink: 0;
+}
+
+.news_list {
+  max-width: 570px;
+  display: flex;
+  gap: 30px;
+}
+
+.new-item {
+  flex: 1;
+  border-radius: 12px;
+  border: 1px solid #e8ebee;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.new-item:hover {
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.05);
+  border-color: transparent;
+  transform: translateY(14px);
+}
+
+.new-item_thumb {
+  display: block;
+  width: 100%;
+  height: 172px;
+  object-fit: cover;
+}
+
+.news-item__body {
+  padding: 24px 24px 16px;
+}
+
+.news-item__heading {
+  color: #10375c;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.63;
+}
+
+.news-item__desc {
+  min-width: 226px;
+  width: 100%;
+  margin-top: 10px;
+  color: #575f66;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.72;
+}
+
+.news-item__more {
+  display: inline-block;
+  margin-top: 12px;
+  color: #10375c;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.news__heading {
+  max-width: 470px;
+}
+
+.news_more {
+  color: #10375c;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.56;
+  text-decoration-line: underline;
+}
+.news-item__more:hover {
+  color: var(--primary-color);
+}
+
+.news__control {
+  margin-top: 28px;
+}
+
+/* Appointment */
+
+.appointment {
+  margin: 85px 0 170px;
+}
+
+.appointment__inner {
+  padding: 100px 178px;
+  background: #f6fbff;
+  text-align: center;
+}
+.appointment__heading {
+  position: relative;
+  padding-bottom: 20px;
+}
+.appointment__heading::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background: var(--primary-color);
+  display: block;
+  width: 136px;
+  height: 2px;
+  flex-shrink: 0;
+}
+
+.appointment__desc {
+  max-width: 617px;
+  font-size: 1.6rem;
+  margin: 18px auto 38px;
+}
+
+/* Footer */
+
+.footer {
+  padding-top: 100px;
+  background: #10375c;
+  font-family: "Open Sans", sans-serif;
+}
+
+.footer__row {
+  display: grid;
+  grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+  column-gap: 78px;
+}
+
+.footer__desc {
+  margin-top: 20px;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #a9b3bb;
+}
+
+.footer__heading {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #fff;
+}
+
+.footer__list {
+  margin-bottom: 28px;
+}
+
+.footer__link {
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: #a9b3bb;
+  white-space: nowrap;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__item {
+  margin-bottom: 10px;
+}
+
+.footer__social {
+  display: flex;
+  column-gap: 10px;
+  margin-bottom: 28px;
+}
+
+.footer__social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #2e80ce;
+  background: #fff;
+  transition: 0.25s;
+}
+
+.footer__social-btn:hover {
+  color: #fff;
+  background: #2e80ce;
+}
+
+.footer-form {
+  display: flex;
+  column-gap: 12px;
+  margin-top: 10px;
+}
+
+.footer-form__input {
+  width: 212px;
+  height: 46px;
+  padding: 0 10px;
+  outline: none;
+  border: 1px solid #406181;
+  border-radius: 4px;
+  color: #fff;
+  background: transparent;
+}
+
+.footer-form__input::placeholder {
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: #9ca8b1;
+}
+
+.footer-form__submit {
+  --height: 46px;
+
+  min-width: 108px;
+  border-radius: 4px;
+  font-size: 1.4rem;
+}
+
+.footer__copyright {
+  padding: 28px 0 42px;
+  border-top: 1px solid #406181;
+}
+
+.footer__copyright-text {
+  font-size: 1.4rem;
+  line-height: 1.86;
+  text-align: center;
+  color: #aab3ba;
 }
